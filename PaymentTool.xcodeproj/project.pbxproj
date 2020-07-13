@@ -49,7 +49,7 @@
 		85EE851124B9830C00F8C386 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		85EE851324B983BF00F8C386 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		85EE851924B98B2C00F8C386 /* MainModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModels.swift; sourceTree = "<group>"; };
-		85F33DD724B976A7000F4732 /* SwiftVIPBaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftVIPBaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		85F33DD724B976A7000F4732 /* PaymentTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaymentTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F33DDA24B976A7000F4732 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85F33DDC24B976A7000F4732 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		85F33DDE24B976A7000F4732 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -57,10 +57,10 @@
 		85F33DE324B976A9000F4732 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85F33DE624B976A9000F4732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85F33DE824B976A9000F4732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		85F33DED24B976A9000F4732 /* SwiftVIPBaseProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftVIPBaseProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		85F33DED24B976A9000F4732 /* PaymentToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaymentToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F33DF124B976A9000F4732 /* SwiftVIPBaseProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftVIPBaseProjectTests.swift; sourceTree = "<group>"; };
 		85F33DF324B976A9000F4732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		85F33DF824B976A9000F4732 /* SwiftVIPBaseProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftVIPBaseProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		85F33DF824B976A9000F4732 /* PaymentToolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaymentToolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F33DFC24B976A9000F4732 /* SwiftVIPBaseProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftVIPBaseProjectUITests.swift; sourceTree = "<group>"; };
 		85F33DFE24B976A9000F4732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,9 +153,9 @@
 		85F33DCE24B976A7000F4732 = {
 			isa = PBXGroup;
 			children = (
-				85F33DD924B976A7000F4732 /* SwiftVIPBaseProject */,
-				85F33DF024B976A9000F4732 /* SwiftVIPBaseProjectTests */,
-				85F33DFB24B976A9000F4732 /* SwiftVIPBaseProjectUITests */,
+				85F33DD924B976A7000F4732 /* PaymentTool */,
+				85F33DF024B976A9000F4732 /* PaymentToolTests */,
+				85F33DFB24B976A9000F4732 /* PaymentToolUITests */,
 				85F33DD824B976A7000F4732 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -163,14 +163,14 @@
 		85F33DD824B976A7000F4732 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				85F33DD724B976A7000F4732 /* SwiftVIPBaseProject.app */,
-				85F33DED24B976A9000F4732 /* SwiftVIPBaseProjectTests.xctest */,
-				85F33DF824B976A9000F4732 /* SwiftVIPBaseProjectUITests.xctest */,
+				85F33DD724B976A7000F4732 /* PaymentTool.app */,
+				85F33DED24B976A9000F4732 /* PaymentToolTests.xctest */,
+				85F33DF824B976A9000F4732 /* PaymentToolUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		85F33DD924B976A7000F4732 /* SwiftVIPBaseProject */ = {
+		85F33DD924B976A7000F4732 /* PaymentTool */ = {
 			isa = PBXGroup;
 			children = (
 				85F33DE824B976A9000F4732 /* Info.plist */,
@@ -184,33 +184,33 @@
 				85EB4ED124B978970080E85B /* SupportingObjects */,
 				85EB4ED324B978E70080E85B /* Workers */,
 			);
-			path = SwiftVIPBaseProject;
+			path = PaymentTool;
 			sourceTree = "<group>";
 		};
-		85F33DF024B976A9000F4732 /* SwiftVIPBaseProjectTests */ = {
+		85F33DF024B976A9000F4732 /* PaymentToolTests */ = {
 			isa = PBXGroup;
 			children = (
 				85F33DF124B976A9000F4732 /* SwiftVIPBaseProjectTests.swift */,
 				85F33DF324B976A9000F4732 /* Info.plist */,
 			);
-			path = SwiftVIPBaseProjectTests;
+			path = PaymentToolTests;
 			sourceTree = "<group>";
 		};
-		85F33DFB24B976A9000F4732 /* SwiftVIPBaseProjectUITests */ = {
+		85F33DFB24B976A9000F4732 /* PaymentToolUITests */ = {
 			isa = PBXGroup;
 			children = (
 				85F33DFC24B976A9000F4732 /* SwiftVIPBaseProjectUITests.swift */,
 				85F33DFE24B976A9000F4732 /* Info.plist */,
 			);
-			path = SwiftVIPBaseProjectUITests;
+			path = PaymentToolUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		85F33DD624B976A7000F4732 /* SwiftVIPBaseProject */ = {
+		85F33DD624B976A7000F4732 /* PaymentTool */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 85F33E0124B976A9000F4732 /* Build configuration list for PBXNativeTarget "SwiftVIPBaseProject" */;
+			buildConfigurationList = 85F33E0124B976A9000F4732 /* Build configuration list for PBXNativeTarget "PaymentTool" */;
 			buildPhases = (
 				85EE851524B9869C00F8C386 /* SwiftLint Script */,
 				85F33DD324B976A7000F4732 /* Sources */,
@@ -221,14 +221,14 @@
 			);
 			dependencies = (
 			);
-			name = SwiftVIPBaseProject;
+			name = PaymentTool;
 			productName = SwiftVIPBaseProject;
-			productReference = 85F33DD724B976A7000F4732 /* SwiftVIPBaseProject.app */;
+			productReference = 85F33DD724B976A7000F4732 /* PaymentTool.app */;
 			productType = "com.apple.product-type.application";
 		};
-		85F33DEC24B976A9000F4732 /* SwiftVIPBaseProjectTests */ = {
+		85F33DEC24B976A9000F4732 /* PaymentToolTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 85F33E0424B976A9000F4732 /* Build configuration list for PBXNativeTarget "SwiftVIPBaseProjectTests" */;
+			buildConfigurationList = 85F33E0424B976A9000F4732 /* Build configuration list for PBXNativeTarget "PaymentToolTests" */;
 			buildPhases = (
 				85F33DE924B976A9000F4732 /* Sources */,
 				85F33DEA24B976A9000F4732 /* Frameworks */,
@@ -239,14 +239,14 @@
 			dependencies = (
 				85F33DEF24B976A9000F4732 /* PBXTargetDependency */,
 			);
-			name = SwiftVIPBaseProjectTests;
+			name = PaymentToolTests;
 			productName = SwiftVIPBaseProjectTests;
-			productReference = 85F33DED24B976A9000F4732 /* SwiftVIPBaseProjectTests.xctest */;
+			productReference = 85F33DED24B976A9000F4732 /* PaymentToolTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		85F33DF724B976A9000F4732 /* SwiftVIPBaseProjectUITests */ = {
+		85F33DF724B976A9000F4732 /* PaymentToolUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 85F33E0724B976A9000F4732 /* Build configuration list for PBXNativeTarget "SwiftVIPBaseProjectUITests" */;
+			buildConfigurationList = 85F33E0724B976A9000F4732 /* Build configuration list for PBXNativeTarget "PaymentToolUITests" */;
 			buildPhases = (
 				85F33DF424B976A9000F4732 /* Sources */,
 				85F33DF524B976A9000F4732 /* Frameworks */,
@@ -257,9 +257,9 @@
 			dependencies = (
 				85F33DFA24B976A9000F4732 /* PBXTargetDependency */,
 			);
-			name = SwiftVIPBaseProjectUITests;
+			name = PaymentToolUITests;
 			productName = SwiftVIPBaseProjectUITests;
-			productReference = 85F33DF824B976A9000F4732 /* SwiftVIPBaseProjectUITests.xctest */;
+			productReference = 85F33DF824B976A9000F4732 /* PaymentToolUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -285,7 +285,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 85F33DD224B976A7000F4732 /* Build configuration list for PBXProject "SwiftVIPBaseProject" */;
+			buildConfigurationList = 85F33DD224B976A7000F4732 /* Build configuration list for PBXProject "PaymentTool" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -298,9 +298,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				85F33DD624B976A7000F4732 /* SwiftVIPBaseProject */,
-				85F33DEC24B976A9000F4732 /* SwiftVIPBaseProjectTests */,
-				85F33DF724B976A9000F4732 /* SwiftVIPBaseProjectUITests */,
+				85F33DD624B976A7000F4732 /* PaymentTool */,
+				85F33DEC24B976A9000F4732 /* PaymentToolTests */,
+				85F33DF724B976A9000F4732 /* PaymentToolUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -392,12 +392,12 @@
 /* Begin PBXTargetDependency section */
 		85F33DEF24B976A9000F4732 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 85F33DD624B976A7000F4732 /* SwiftVIPBaseProject */;
+			target = 85F33DD624B976A7000F4732 /* PaymentTool */;
 			targetProxy = 85F33DEE24B976A9000F4732 /* PBXContainerItemProxy */;
 		};
 		85F33DFA24B976A9000F4732 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 85F33DD624B976A7000F4732 /* SwiftVIPBaseProject */;
+			target = 85F33DD624B976A7000F4732 /* PaymentTool */;
 			targetProxy = 85F33DF924B976A9000F4732 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -542,12 +542,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A2K8AKR8G9;
-				INFOPLIST_FILE = SwiftVIPBaseProject/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PaymentTool/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vigotskij.SwiftVIPBaseProject;
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_NAME}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -560,12 +560,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A2K8AKR8G9;
-				INFOPLIST_FILE = SwiftVIPBaseProject/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PaymentTool/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vigotskij.SwiftVIPBaseProject;
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_NAME}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -589,7 +589,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftVIPBaseProject.app/SwiftVIPBaseProject";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaymentTool.app/PaymentTool";
 			};
 			name = Debug;
 		};
@@ -610,7 +610,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftVIPBaseProject.app/SwiftVIPBaseProject";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaymentTool.app/PaymentTool";
 			};
 			name = Release;
 		};
@@ -655,7 +655,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		85F33DD224B976A7000F4732 /* Build configuration list for PBXProject "SwiftVIPBaseProject" */ = {
+		85F33DD224B976A7000F4732 /* Build configuration list for PBXProject "PaymentTool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				85F33DFF24B976A9000F4732 /* Debug */,
@@ -664,7 +664,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		85F33E0124B976A9000F4732 /* Build configuration list for PBXNativeTarget "SwiftVIPBaseProject" */ = {
+		85F33E0124B976A9000F4732 /* Build configuration list for PBXNativeTarget "PaymentTool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				85F33E0224B976A9000F4732 /* Debug */,
@@ -673,7 +673,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		85F33E0424B976A9000F4732 /* Build configuration list for PBXNativeTarget "SwiftVIPBaseProjectTests" */ = {
+		85F33E0424B976A9000F4732 /* Build configuration list for PBXNativeTarget "PaymentToolTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				85F33E0524B976A9000F4732 /* Debug */,
@@ -682,7 +682,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		85F33E0724B976A9000F4732 /* Build configuration list for PBXNativeTarget "SwiftVIPBaseProjectUITests" */ = {
+		85F33E0724B976A9000F4732 /* Build configuration list for PBXNativeTarget "PaymentToolUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				85F33E0824B976A9000F4732 /* Debug */,

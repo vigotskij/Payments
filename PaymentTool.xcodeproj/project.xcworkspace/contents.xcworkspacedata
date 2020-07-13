@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:SwiftVIPBaseProject.xcodeproj">
+      location = "self:/Users/boriss/Documents/practices/Payments/PaymentTool.xcodeproj">
    </FileRef>
 </Workspace>
