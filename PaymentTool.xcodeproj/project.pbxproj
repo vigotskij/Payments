@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		853D01AD24BD08AE00B96111 /* KeysConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D01AC24BD08AE00B96111 /* KeysConstants.swift */; };
+		853D01AF24BD092600B96111 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D01AE24BD092600B96111 /* Endpoints.swift */; };
+		85E1887824BE26DD0020679A /* EnpointsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E1887724BE26DD0020679A /* EnpointsTests.swift */; };
 		85EB4ED624B979560080E85B /* Architecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EB4ED524B979560080E85B /* Architecture.swift */; };
 		85EB4ED824B979B20080E85B /* MainContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EB4ED724B979B20080E85B /* MainContracts.swift */; };
 		85EB4EDA24B97AAA0080E85B /* MainConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EB4ED924B97AAA0080E85B /* MainConfigurator.swift */; };
@@ -20,7 +23,6 @@
 		85F33DE224B976A7000F4732 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85F33DE024B976A7000F4732 /* Main.storyboard */; };
 		85F33DE424B976A9000F4732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85F33DE324B976A9000F4732 /* Assets.xcassets */; };
 		85F33DE724B976A9000F4732 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85F33DE524B976A9000F4732 /* LaunchScreen.storyboard */; };
-		85F33DF224B976A9000F4732 /* SwiftVIPBaseProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F33DF124B976A9000F4732 /* SwiftVIPBaseProjectTests.swift */; };
 		85F33DFD24B976A9000F4732 /* SwiftVIPBaseProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F33DFC24B976A9000F4732 /* SwiftVIPBaseProjectUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		853D01AC24BD08AE00B96111 /* KeysConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeysConstants.swift; sourceTree = "<group>"; };
+		853D01AE24BD092600B96111 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		85E1887724BE26DD0020679A /* EnpointsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnpointsTests.swift; sourceTree = "<group>"; };
 		85EB4ED524B979560080E85B /* Architecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Architecture.swift; sourceTree = "<group>"; };
 		85EB4ED724B979B20080E85B /* MainContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContracts.swift; sourceTree = "<group>"; };
 		85EB4ED924B97AAA0080E85B /* MainConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConfigurator.swift; sourceTree = "<group>"; };
@@ -58,7 +63,6 @@
 		85F33DE624B976A9000F4732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85F33DE824B976A9000F4732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85F33DED24B976A9000F4732 /* PaymentToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaymentToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		85F33DF124B976A9000F4732 /* SwiftVIPBaseProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftVIPBaseProjectTests.swift; sourceTree = "<group>"; };
 		85F33DF324B976A9000F4732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85F33DF824B976A9000F4732 /* PaymentToolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaymentToolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F33DFC24B976A9000F4732 /* SwiftVIPBaseProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftVIPBaseProjectUITests.swift; sourceTree = "<group>"; };
@@ -90,6 +94,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		853D01AB24BD087400B96111 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				853D01AC24BD08AE00B96111 /* KeysConstants.swift */,
+				853D01AE24BD092600B96111 /* Endpoints.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		85EB4ED024B9788B0080E85B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +114,7 @@
 		85EB4ED124B978970080E85B /* SupportingObjects */ = {
 			isa = PBXGroup;
 			children = (
+				853D01AB24BD087400B96111 /* Constants */,
 				85EE851724B98B1400F8C386 /* Models */,
 			);
 			path = SupportingObjects;
@@ -190,8 +204,8 @@
 		85F33DF024B976A9000F4732 /* PaymentToolTests */ = {
 			isa = PBXGroup;
 			children = (
-				85F33DF124B976A9000F4732 /* SwiftVIPBaseProjectTests.swift */,
 				85F33DF324B976A9000F4732 /* Info.plist */,
+				85E1887724BE26DD0020679A /* EnpointsTests.swift */,
 			);
 			path = PaymentToolTests;
 			sourceTree = "<group>";
@@ -277,6 +291,7 @@
 					};
 					85F33DEC24B976A9000F4732 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 						TestTargetID = 85F33DD624B976A7000F4732;
 					};
 					85F33DF724B976A9000F4732 = {
@@ -362,11 +377,13 @@
 				85EB4ED824B979B20080E85B /* MainContracts.swift in Sources */,
 				85EE851A24B98B2C00F8C386 /* MainModels.swift in Sources */,
 				85F33DDF24B976A7000F4732 /* MainViewController.swift in Sources */,
+				853D01AD24BD08AE00B96111 /* KeysConstants.swift in Sources */,
 				85EE851224B9830C00F8C386 /* MainPresenter.swift in Sources */,
 				85EE851024B9828E00F8C386 /* MainInteractor.swift in Sources */,
 				85F33DDB24B976A7000F4732 /* AppDelegate.swift in Sources */,
 				85F33DDD24B976A7000F4732 /* SceneDelegate.swift in Sources */,
 				85EB4EDA24B97AAA0080E85B /* MainConfigurator.swift in Sources */,
+				853D01AF24BD092600B96111 /* Endpoints.swift in Sources */,
 				85EE851424B983BF00F8C386 /* MainRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,7 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85F33DF224B976A9000F4732 /* SwiftVIPBaseProjectTests.swift in Sources */,
+				85E1887824BE26DD0020679A /* EnpointsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,16 +594,18 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SwiftVIPBaseProjectTests/Info.plist;
+				INFOPLIST_FILE = PaymentToolTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vigotskij.SwiftVIPBaseProjectTests;
+				PRODUCT_BUNDLE_IDENTIFIER = vigotskij.PaymentToolTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaymentTool.app/PaymentTool";
@@ -598,15 +617,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SwiftVIPBaseProjectTests/Info.plist;
+				INFOPLIST_FILE = PaymentToolTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vigotskij.SwiftVIPBaseProjectTests;
+				PRODUCT_BUNDLE_IDENTIFIER = vigotskij.PaymentToolTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -619,13 +639,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SwiftVIPBaseProjectUITests/Info.plist;
+				INFOPLIST_FILE = PaymentToolUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vigotskij.SwiftVIPBaseProjectUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = vigotskij.PaymentToolUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -638,13 +658,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SwiftVIPBaseProjectUITests/Info.plist;
+				INFOPLIST_FILE = PaymentToolUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vigotskij.SwiftVIPBaseProjectUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = vigotskij.PaymentToolUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
