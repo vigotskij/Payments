@@ -10,20 +10,87 @@
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="SwiftVIPBaseProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="PaymentTool" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ffw-iw-dqA" customClass="AmountView" customModule="PaymentTool" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T4J-6k-XiX" customClass="PaymentMethodsView" customModule="PaymentTool" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEs-gU-YjN" customClass="BanksView" customModule="PaymentTool" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lGC-Qu-EXG" customClass="InstallmentsView" customModule="PaymentTool" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6kB-eb-c7Z" customClass="ConfirmView" customModule="PaymentTool" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OfV-8c-PZK" customClass="SuccessView" customModule="PaymentTool" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pge-na-NLe" customClass="ErrorView" customModule="PaymentTool" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pge-na-NLe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5dt-St-dTT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T4J-6k-XiX" secondAttribute="trailing" id="Abt-4h-TpX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LEs-gU-YjN" secondAttribute="bottom" id="DF9-hV-ge2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OfV-8c-PZK" secondAttribute="trailing" id="DXi-K9-IRw"/>
+                            <constraint firstItem="pge-na-NLe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="HPF-T0-U7V"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pge-na-NLe" secondAttribute="trailing" id="JM4-xx-3iC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6kB-eb-c7Z" secondAttribute="bottom" id="JiV-nN-b7g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="T4J-6k-XiX" secondAttribute="bottom" id="Lc7-ec-qbT"/>
+                            <constraint firstItem="T4J-6k-XiX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="MkK-0j-ZG1"/>
+                            <constraint firstItem="OfV-8c-PZK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MtG-tn-ql8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6kB-eb-c7Z" secondAttribute="trailing" id="Vvh-wc-6EW"/>
+                            <constraint firstItem="6kB-eb-c7Z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Y14-I9-IOu"/>
+                            <constraint firstItem="LEs-gU-YjN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ycq-Ii-6Op"/>
+                            <constraint firstItem="Ffw-iw-dqA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZNy-8J-NIN"/>
+                            <constraint firstItem="Ffw-iw-dqA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bCU-iK-hdb"/>
+                            <constraint firstItem="OfV-8c-PZK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bxx-xU-45w"/>
+                            <constraint firstItem="LEs-gU-YjN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fip-Yd-CjK"/>
+                            <constraint firstItem="Ffw-iw-dqA" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="gtp-8T-b9m"/>
+                            <constraint firstItem="6kB-eb-c7Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="i5w-cT-sl9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lGC-Qu-EXG" secondAttribute="trailing" id="iHi-l5-zIE"/>
+                            <constraint firstItem="lGC-Qu-EXG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jMJ-iB-ad2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lGC-Qu-EXG" secondAttribute="bottom" id="nqE-pR-sKP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LEs-gU-YjN" secondAttribute="trailing" id="pkf-b3-HYb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OfV-8c-PZK" secondAttribute="bottom" id="poh-nW-QV5"/>
+                            <constraint firstItem="lGC-Qu-EXG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="s6P-vs-lym"/>
+                            <constraint firstItem="Ffw-iw-dqA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uAo-4J-97p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pge-na-NLe" secondAttribute="bottom" id="ute-TP-DWC"/>
+                            <constraint firstItem="T4J-6k-XiX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vfU-5B-R7g"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="amountView" destination="Ffw-iw-dqA" id="lfY-28-JDr"/>
+                        <outlet property="banksView" destination="LEs-gU-YjN" id="Scn-M4-cDv"/>
+                        <outlet property="confirmView" destination="6kB-eb-c7Z" id="ReU-MQ-KD5"/>
+                        <outlet property="errorView" destination="pge-na-NLe" id="GuQ-Ic-lfF"/>
+                        <outlet property="installmentsView" destination="lGC-Qu-EXG" id="XE1-4F-cLe"/>
+                        <outlet property="paymentMethodsView" destination="T4J-6k-XiX" id="iMb-Ve-fsZ"/>
+                        <outlet property="successView" destination="OfV-8c-PZK" id="cu4-PW-bR3"/>
                         <outlet property="view" destination="8bC-Xf-vdC" id="25w-eu-Dsv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="113"/>
+            <point key="canvasLocation" x="132" y="112.89355322338831"/>
         </scene>
     </scenes>
 </document>

@@ -149,6 +149,13 @@
 			path = ErrorView;
 			sourceTree = "<group>";
 		};
+		855901E624BFC2C8004676D2 /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Contracts;
+			sourceTree = "<group>";
+		};
 		855F143524BF4B2800E94E23 /* BanksView */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +186,7 @@
 		859E141724BE5D2B009EFE43 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				855901E624BFC2C8004676D2 /* Contracts */,
 				859E141824BE5D3C009EFE43 /* AmountView */,
 				855F143524BF4B2800E94E23 /* BanksView */,
 				855901DC24BFA8FB004676D2 /* ConfirmView */,

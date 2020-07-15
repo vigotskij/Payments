@@ -8,14 +8,17 @@
 
 import UIKit
 
-class AmountView: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+final class AmountView: UIView {
+    private var viewModel: MainModels.AmountViewModel? {
+        didSet {
+            title?.text = viewModel?.title
+        }
     }
-    */
 
+    // MARK: Outlets
+    @IBOutlet private weak var title: UILabel?
+
+    func update(viewModel: MainModels.AmountViewModel?) {
+        self.viewModel = viewModel
+    }
 }

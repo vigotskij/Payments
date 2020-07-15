@@ -24,6 +24,7 @@ class MainViewController: UIViewController {
 
     private var amountViewModel: MainModels.AmountViewModel? {
         didSet {
+            amountView?.update(viewModel: amountViewModel)
             updateViews()
         }
     }
