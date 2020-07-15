@@ -8,22 +8,43 @@
 
 enum MainModels {
     enum State {
-        case amount
-        case paymentMethods
-        case banks
-        case installments
-        case confirm
-        case error
-        case success
+        case amount(AmountViewModel)
+        case paymentMethods(PaymentMethodsViewModel)
+        case banks(BanksViewModel)
+        case installments(InstallmentsViewModel)
+        case confirm(ConfirmViewModel)
+        case success(SuccessViewModel)
+        case error(ErrorViewModel)
     }
-    
+
     struct Request {
         // Data from View to Interactor/Workers
     }
     struct Response {
-        // Modeled Data from Interactor to Presenter
+        let state: State
     }
-    struct ViewModel {
+    struct ViewModels {
         // Modeled view Data from Presenter to View
+    }
+    struct AmountViewModel {
+        let title: String
+    }
+    struct PaymentMethodsViewModel {
+        let title: String
+    }
+    struct BanksViewModel {
+        let title: String
+    }
+    struct InstallmentsViewModel {
+        let title: String
+    }
+    struct ConfirmViewModel {
+        let title: String
+    }
+    struct SuccessViewModel {
+        let title: String
+    }
+    struct ErrorViewModel {
+        let title: String
     }
 }
