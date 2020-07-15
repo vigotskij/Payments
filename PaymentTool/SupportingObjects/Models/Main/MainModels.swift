@@ -7,6 +7,16 @@
 //
 
 enum MainModels {
+    enum State {
+        case amount
+        case paymentMethods
+        case banks
+        case installments
+        case confirm
+        case error
+        case success
+    }
+    
     struct Request {
         // Data from View to Interactor/Workers
     }

@@ -9,6 +9,20 @@
 /* Begin PBXBuildFile section */
 		853D01AD24BD08AE00B96111 /* KeysConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D01AC24BD08AE00B96111 /* KeysConstants.swift */; };
 		853D01AF24BD092600B96111 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D01AE24BD092600B96111 /* Endpoints.swift */; };
+		855901DF24BFA927004676D2 /* ConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855901DE24BFA927004676D2 /* ConfirmView.swift */; };
+		855901E124BFA93A004676D2 /* ConfirmView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 855901E024BFA93A004676D2 /* ConfirmView.xib */; };
+		855901E324BFA956004676D2 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855901E224BFA956004676D2 /* ErrorView.swift */; };
+		855901E524BFA966004676D2 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 855901E424BFA966004676D2 /* ErrorView.xib */; };
+		855F143924BF4B9400E94E23 /* AmountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 855F143824BF4B9400E94E23 /* AmountView.xib */; };
+		855F143B24BF4BB500E94E23 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F143A24BF4BB500E94E23 /* AmountView.swift */; };
+		855F143D24BF4C2100E94E23 /* BanksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F143C24BF4C2100E94E23 /* BanksView.swift */; };
+		855F143F24BF4C3300E94E23 /* BanksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 855F143E24BF4C3300E94E23 /* BanksView.xib */; };
+		855F144224BF4C5E00E94E23 /* InstallmentsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 855F144124BF4C5E00E94E23 /* InstallmentsView.xib */; };
+		855F144424BF4C7A00E94E23 /* InstallmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F144324BF4C7A00E94E23 /* InstallmentsView.swift */; };
+		855F144624BF4CAE00E94E23 /* PaymentMethodsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F144524BF4CAE00E94E23 /* PaymentMethodsView.swift */; };
+		855F144824BF4CBF00E94E23 /* PaymentsMethodsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 855F144724BF4CBF00E94E23 /* PaymentsMethodsView.xib */; };
+		855F144B24BF4CFF00E94E23 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F144A24BF4CFF00E94E23 /* SuccessView.swift */; };
+		855F144D24BF4D1700E94E23 /* SuccessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 855F144C24BF4D1700E94E23 /* SuccessView.xib */; };
 		85E1887824BE26DD0020679A /* EnpointsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E1887724BE26DD0020679A /* EnpointsTests.swift */; };
 		85EB4ED624B979560080E85B /* Architecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EB4ED524B979560080E85B /* Architecture.swift */; };
 		85EB4ED824B979B20080E85B /* MainContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EB4ED724B979B20080E85B /* MainContracts.swift */; };
@@ -46,6 +60,20 @@
 /* Begin PBXFileReference section */
 		853D01AC24BD08AE00B96111 /* KeysConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeysConstants.swift; sourceTree = "<group>"; };
 		853D01AE24BD092600B96111 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		855901DE24BFA927004676D2 /* ConfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmView.swift; sourceTree = "<group>"; };
+		855901E024BFA93A004676D2 /* ConfirmView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmView.xib; sourceTree = "<group>"; };
+		855901E224BFA956004676D2 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		855901E424BFA966004676D2 /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
+		855F143824BF4B9400E94E23 /* AmountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmountView.xib; sourceTree = "<group>"; };
+		855F143A24BF4BB500E94E23 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
+		855F143C24BF4C2100E94E23 /* BanksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksView.swift; sourceTree = "<group>"; };
+		855F143E24BF4C3300E94E23 /* BanksView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BanksView.xib; sourceTree = "<group>"; };
+		855F144124BF4C5E00E94E23 /* InstallmentsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstallmentsView.xib; sourceTree = "<group>"; };
+		855F144324BF4C7A00E94E23 /* InstallmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentsView.swift; sourceTree = "<group>"; };
+		855F144524BF4CAE00E94E23 /* PaymentMethodsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodsView.swift; sourceTree = "<group>"; };
+		855F144724BF4CBF00E94E23 /* PaymentsMethodsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentsMethodsView.xib; sourceTree = "<group>"; };
+		855F144A24BF4CFF00E94E23 /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
+		855F144C24BF4D1700E94E23 /* SuccessView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuccessView.xib; sourceTree = "<group>"; };
 		85E1887724BE26DD0020679A /* EnpointsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnpointsTests.swift; sourceTree = "<group>"; };
 		85EB4ED524B979560080E85B /* Architecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Architecture.swift; sourceTree = "<group>"; };
 		85EB4ED724B979B20080E85B /* MainContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContracts.swift; sourceTree = "<group>"; };
@@ -103,6 +131,83 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		855901DC24BFA8FB004676D2 /* ConfirmView */ = {
+			isa = PBXGroup;
+			children = (
+				855901DE24BFA927004676D2 /* ConfirmView.swift */,
+				855901E024BFA93A004676D2 /* ConfirmView.xib */,
+			);
+			path = ConfirmView;
+			sourceTree = "<group>";
+		};
+		855901DD24BFA90A004676D2 /* ErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				855901E224BFA956004676D2 /* ErrorView.swift */,
+				855901E424BFA966004676D2 /* ErrorView.xib */,
+			);
+			path = ErrorView;
+			sourceTree = "<group>";
+		};
+		855F143524BF4B2800E94E23 /* BanksView */ = {
+			isa = PBXGroup;
+			children = (
+				855F143C24BF4C2100E94E23 /* BanksView.swift */,
+				855F143E24BF4C3300E94E23 /* BanksView.xib */,
+			);
+			path = BanksView;
+			sourceTree = "<group>";
+		};
+		855F143624BF4B5C00E94E23 /* InstallmentsView */ = {
+			isa = PBXGroup;
+			children = (
+				855F144124BF4C5E00E94E23 /* InstallmentsView.xib */,
+				855F144324BF4C7A00E94E23 /* InstallmentsView.swift */,
+			);
+			path = InstallmentsView;
+			sourceTree = "<group>";
+		};
+		855F143724BF4B6B00E94E23 /* SuccessView */ = {
+			isa = PBXGroup;
+			children = (
+				855F144A24BF4CFF00E94E23 /* SuccessView.swift */,
+				855F144C24BF4D1700E94E23 /* SuccessView.xib */,
+			);
+			path = SuccessView;
+			sourceTree = "<group>";
+		};
+		859E141724BE5D2B009EFE43 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				859E141824BE5D3C009EFE43 /* AmountView */,
+				855F143524BF4B2800E94E23 /* BanksView */,
+				855901DC24BFA8FB004676D2 /* ConfirmView */,
+				855901DD24BFA90A004676D2 /* ErrorView */,
+				855F143624BF4B5C00E94E23 /* InstallmentsView */,
+				859E141924BE5D67009EFE43 /* PaymentMethodsView */,
+				855F143724BF4B6B00E94E23 /* SuccessView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		859E141824BE5D3C009EFE43 /* AmountView */ = {
+			isa = PBXGroup;
+			children = (
+				855F143824BF4B9400E94E23 /* AmountView.xib */,
+				855F143A24BF4BB500E94E23 /* AmountView.swift */,
+			);
+			path = AmountView;
+			sourceTree = "<group>";
+		};
+		859E141924BE5D67009EFE43 /* PaymentMethodsView */ = {
+			isa = PBXGroup;
+			children = (
+				855F144524BF4CAE00E94E23 /* PaymentMethodsView.swift */,
+				855F144724BF4CBF00E94E23 /* PaymentsMethodsView.xib */,
+			);
+			path = PaymentMethodsView;
+			sourceTree = "<group>";
+		};
 		85EB4ED024B9788B0080E85B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +243,7 @@
 		85EB4ED424B9791D0080E85B /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				859E141724BE5D2B009EFE43 /* Views */,
 				85EB4ED924B97AAA0080E85B /* MainConfigurator.swift */,
 				85EE851324B983BF00F8C386 /* MainRouter.swift */,
 				85EB4ED724B979B20080E85B /* MainContracts.swift */,
@@ -326,8 +432,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				85F33DE724B976A9000F4732 /* LaunchScreen.storyboard in Resources */,
+				855F144824BF4CBF00E94E23 /* PaymentsMethodsView.xib in Resources */,
 				85F33DE424B976A9000F4732 /* Assets.xcassets in Resources */,
+				855F143924BF4B9400E94E23 /* AmountView.xib in Resources */,
+				855F144D24BF4D1700E94E23 /* SuccessView.xib in Resources */,
 				85F33DE224B976A7000F4732 /* Main.storyboard in Resources */,
+				855F144224BF4C5E00E94E23 /* InstallmentsView.xib in Resources */,
+				855901E124BFA93A004676D2 /* ConfirmView.xib in Resources */,
+				855F143F24BF4C3300E94E23 /* BanksView.xib in Resources */,
+				855901E524BFA966004676D2 /* ErrorView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,15 +486,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				855F144624BF4CAE00E94E23 /* PaymentMethodsView.swift in Sources */,
 				85EB4ED624B979560080E85B /* Architecture.swift in Sources */,
+				855901E324BFA956004676D2 /* ErrorView.swift in Sources */,
+				855F144B24BF4CFF00E94E23 /* SuccessView.swift in Sources */,
 				85EB4ED824B979B20080E85B /* MainContracts.swift in Sources */,
 				85EE851A24B98B2C00F8C386 /* MainModels.swift in Sources */,
+				855901DF24BFA927004676D2 /* ConfirmView.swift in Sources */,
 				85F33DDF24B976A7000F4732 /* MainViewController.swift in Sources */,
 				853D01AD24BD08AE00B96111 /* KeysConstants.swift in Sources */,
+				855F143B24BF4BB500E94E23 /* AmountView.swift in Sources */,
+				855F143D24BF4C2100E94E23 /* BanksView.swift in Sources */,
 				85EE851224B9830C00F8C386 /* MainPresenter.swift in Sources */,
 				85EE851024B9828E00F8C386 /* MainInteractor.swift in Sources */,
 				85F33DDB24B976A7000F4732 /* AppDelegate.swift in Sources */,
 				85F33DDD24B976A7000F4732 /* SceneDelegate.swift in Sources */,
+				855F144424BF4C7A00E94E23 /* InstallmentsView.swift in Sources */,
 				85EB4EDA24B97AAA0080E85B /* MainConfigurator.swift in Sources */,
 				853D01AF24BD092600B96111 /* Endpoints.swift in Sources */,
 				85EE851424B983BF00F8C386 /* MainRouter.swift in Sources */,
