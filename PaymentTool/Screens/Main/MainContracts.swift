@@ -17,10 +17,12 @@ protocol MainInteractor: Interactor {
     func viewDidLoad()
 }
 protocol MainPresenter: Presenter {
-    func updateView()
+    func updateView(with response: MainModels.Response)
+    func presentInitialState()
 }
 protocol MainView: View {
     var output: MainInteractor? { get set }
     var router: MainRouter? { get set }
-    func updateView()
+    func updateView(with state: MainModels.State)
+    func presentInitialState(viewModel: MainModels.AmountViewModel)
 }

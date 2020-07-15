@@ -16,6 +16,6 @@ final class MainInteractorImplementation {
 
 extension MainInteractorImplementation: MainInteractor {
     func viewDidLoad() {
-        output?.updateView()
+        output?.presentInitialState()
     }
 }

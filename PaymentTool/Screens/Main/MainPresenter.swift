@@ -15,7 +15,10 @@ final class MainPresenterImplementation {
 }
 
 extension MainPresenterImplementation: MainPresenter {
-    func updateView() {
-        output?.updateView()
+    func updateView(with response: MainModels.Response) {
+        output?.updateView(with: response.state)
+    }
+    func presentInitialState() {
+        output?.presentInitialState(viewModel: .init(title: "start"))
     }
 }
