@@ -8,14 +8,33 @@
 
 import UIKit
 
-class InstallmentsView: UIView {
+final class InstallmentsView: UIView, NibLoadable {
+    private var viewModel: MainModels.InstallmentsViewModel?
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    // MARK: - Initializers
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
     }
-    */
 
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+
+    func update(viewModel: MainModels.InstallmentsViewModel?) {
+        self.viewModel = viewModel
+    }
+}
+
+private extension InstallmentsView {
+    func commonInit() {
+        loadNibContent()
+    }
+}
+
+extension InstallmentsView: Hideable {
+    func shouldHide() -> Bool {
+        return viewModel == nil
+    }
 }
