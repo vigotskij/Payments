@@ -8,14 +8,33 @@
 
 import UIKit
 
-class PaymentMethodsView: UIView {
+final class PaymentMethodsView: UIView, NibLoadable {
+    private var viewModel: MainModels.PaymentMethodsViewModel?
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    // MARK: - Initializers
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
     }
-    */
 
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+
+    func update(viewModel: MainModels.PaymentMethodsViewModel?) {
+        self.viewModel = viewModel
+    }
+}
+
+private extension PaymentMethodsView {
+    func commonInit() {
+        loadNibContent()
+    }
+}
+
+extension PaymentMethodsView: Hideable {
+    func shouldHide() -> Bool {
+        return viewModel == nil
+    }
 }
