@@ -8,14 +8,32 @@
 
 import UIKit
 
-class ErrorView: UIView {
+final class ErrorView: UIView, NibLoadable {
+    private var viewModel: MainModels.ErrorViewModel?
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    // MARK: - Initializers
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
     }
-    */
 
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+    func update(viewModel: MainModels.ErrorViewModel?) {
+        self.viewModel = viewModel
+    }
+}
+
+private extension ErrorView {
+    func commonInit() {
+        loadNibContent()
+    }
+}
+
+extension ErrorView: Hideable {
+    func shouldHide() -> Bool {
+        return viewModel == nil
+    }
 }
