@@ -22,49 +22,6 @@ class MainViewController: UIViewController {
     @IBOutlet private weak var successView: SuccessView?
     @IBOutlet private weak var errorView: ErrorView?
 
-    private var amountViewModel: MainModels.AmountViewModel? {
-        didSet {
-            amountView?.update(viewModel: amountViewModel)
-            updateViews()
-        }
-    }
-
-    private var paymentMethodsViewModel: MainModels.PaymentMethodsViewModel? {
-        didSet {
-            updateViews()
-        }
-    }
-
-    private var banksViewModel: MainModels.BanksViewModel? {
-        didSet {
-            updateViews()
-        }
-    }
-
-    private var installmentsViewModel: MainModels.InstallmentsViewModel? {
-        didSet {
-            updateViews()
-        }
-    }
-
-    private var confirmViewModel: MainModels.ConfirmViewModel? {
-        didSet {
-            updateViews()
-        }
-    }
-
-    private var successViewModel: MainModels.SuccessViewModel? {
-        didSet {
-            updateViews()
-        }
-    }
-
-    private var errorViewModel: MainModels.ErrorViewModel? {
-        didSet {
-            updateViews()
-        }
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         configurator.configure(with: self)
@@ -77,44 +34,47 @@ extension MainViewController: MainView {
         clearViewModels()
         switch state {
         case .amount(let viewModel):
-            amountViewModel = viewModel
+            amountView?.update(viewModel: viewModel)
         case .paymentMethods(let viewModel):
-            paymentMethodsViewModel = viewModel
+            paymentMethodsView?.update(viewModel: viewModel)
         case .banks(let viewModel):
-            banksViewModel = viewModel
+            banksView?.update(viewModel: viewModel)
         case .installments(let viewModel):
-            installmentsViewModel = viewModel
+            installmentsView?.update(viewModel: viewModel)
         case .confirm(let viewModel):
-            confirmViewModel = viewModel
+            confirmView?.update(viewModel: viewModel)
         case .success(let viewModel):
-            successViewModel = viewModel
+            successView?.update(viewModel: viewModel)
         case .error(let viewModel):
-            errorViewModel = viewModel
+            errorView?.update(viewModel: viewModel)
         }
+        updateViews()
     }
 
     func presentInitialState(viewModel: MainModels.AmountViewModel) {
-        self.amountViewModel = viewModel
+        amountView?.update(viewModel: viewModel)
+        updateViews()
     }
 }
 
 private extension MainViewController {
     func updateViews() {
-        amountView?.isHidden = amountViewModel == nil
-        paymentMethodsView?.isHidden = paymentMethodsViewModel == nil
-        banksView?.isHidden = banksViewModel == nil
-        installmentsView?.isHidden = installmentsViewModel == nil
-        confirmView?.isHidden = confirmViewModel == nil
-        successView?.isHidden = successViewModel == nil
-        errorView?.isHidden = errorViewModel == nil
+        amountView?.isHidden = amountView?.shouldHide() ?? true
+        paymentMethodsView?.isHidden = paymentMethodsView?.shouldHide() ?? true
+        banksView?.isHidden = banksView?.shouldHide() ?? true
+        installmentsView?.isHidden = installmentsView?.shouldHide() ?? true
+        confirmView?.isHidden = confirmView?.shouldHide() ?? true
+        successView?.isHidden = successView?.shouldHide() ?? true
+        errorView?.isHidden = errorView?.shouldHide() ?? true
     }
+
     func clearViewModels() {
-        amountViewModel = nil
-        paymentMethodsViewModel = nil
-        banksViewModel = nil
-        installmentsViewModel = nil
-        confirmViewModel = nil
-        successViewModel = nil
-        errorViewModel = nil
+        amountView?.update(viewModel: nil)
+        paymentMethodsView?.update(viewModel: nil)
+        banksView?.update(viewModel: nil)
+        installmentsView?.update(viewModel: nil)
+        confirmView?.update(viewModel: nil)
+        successView?.update(viewModel: nil)
+        errorView?.update(viewModel: nil)
     }
 }
