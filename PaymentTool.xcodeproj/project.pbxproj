@@ -20,9 +20,11 @@
 		855F144224BF4C5E00E94E23 /* InstallmentsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 855F144124BF4C5E00E94E23 /* InstallmentsView.xib */; };
 		855F144424BF4C7A00E94E23 /* InstallmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F144324BF4C7A00E94E23 /* InstallmentsView.swift */; };
 		855F144624BF4CAE00E94E23 /* PaymentMethodsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F144524BF4CAE00E94E23 /* PaymentMethodsView.swift */; };
-		855F144824BF4CBF00E94E23 /* PaymentsMethodsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 855F144724BF4CBF00E94E23 /* PaymentsMethodsView.xib */; };
+		855F144824BF4CBF00E94E23 /* PaymentMethodsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 855F144724BF4CBF00E94E23 /* PaymentMethodsView.xib */; };
 		855F144B24BF4CFF00E94E23 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F144A24BF4CFF00E94E23 /* SuccessView.swift */; };
 		855F144D24BF4D1700E94E23 /* SuccessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 855F144C24BF4D1700E94E23 /* SuccessView.xib */; };
+		856D111E24BFD17C00BC5785 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856D111D24BFD17C00BC5785 /* NibLoadable.swift */; };
+		856D112024BFD8AC00BC5785 /* Hideable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856D111F24BFD8AC00BC5785 /* Hideable.swift */; };
 		85E1887824BE26DD0020679A /* EnpointsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E1887724BE26DD0020679A /* EnpointsTests.swift */; };
 		85EB4ED624B979560080E85B /* Architecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EB4ED524B979560080E85B /* Architecture.swift */; };
 		85EB4ED824B979B20080E85B /* MainContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EB4ED724B979B20080E85B /* MainContracts.swift */; };
@@ -71,9 +73,11 @@
 		855F144124BF4C5E00E94E23 /* InstallmentsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstallmentsView.xib; sourceTree = "<group>"; };
 		855F144324BF4C7A00E94E23 /* InstallmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentsView.swift; sourceTree = "<group>"; };
 		855F144524BF4CAE00E94E23 /* PaymentMethodsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodsView.swift; sourceTree = "<group>"; };
-		855F144724BF4CBF00E94E23 /* PaymentsMethodsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentsMethodsView.xib; sourceTree = "<group>"; };
+		855F144724BF4CBF00E94E23 /* PaymentMethodsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentMethodsView.xib; sourceTree = "<group>"; };
 		855F144A24BF4CFF00E94E23 /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
 		855F144C24BF4D1700E94E23 /* SuccessView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuccessView.xib; sourceTree = "<group>"; };
+		856D111D24BFD17C00BC5785 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		856D111F24BFD8AC00BC5785 /* Hideable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hideable.swift; sourceTree = "<group>"; };
 		85E1887724BE26DD0020679A /* EnpointsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnpointsTests.swift; sourceTree = "<group>"; };
 		85EB4ED524B979560080E85B /* Architecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Architecture.swift; sourceTree = "<group>"; };
 		85EB4ED724B979B20080E85B /* MainContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContracts.swift; sourceTree = "<group>"; };
@@ -152,6 +156,8 @@
 		855901E624BFC2C8004676D2 /* Contracts */ = {
 			isa = PBXGroup;
 			children = (
+				856D111D24BFD17C00BC5785 /* NibLoadable.swift */,
+				856D111F24BFD8AC00BC5785 /* Hideable.swift */,
 			);
 			path = Contracts;
 			sourceTree = "<group>";
@@ -168,8 +174,8 @@
 		855F143624BF4B5C00E94E23 /* InstallmentsView */ = {
 			isa = PBXGroup;
 			children = (
-				855F144124BF4C5E00E94E23 /* InstallmentsView.xib */,
 				855F144324BF4C7A00E94E23 /* InstallmentsView.swift */,
+				855F144124BF4C5E00E94E23 /* InstallmentsView.xib */,
 			);
 			path = InstallmentsView;
 			sourceTree = "<group>";
@@ -201,8 +207,8 @@
 		859E141824BE5D3C009EFE43 /* AmountView */ = {
 			isa = PBXGroup;
 			children = (
-				855F143824BF4B9400E94E23 /* AmountView.xib */,
 				855F143A24BF4BB500E94E23 /* AmountView.swift */,
+				855F143824BF4B9400E94E23 /* AmountView.xib */,
 			);
 			path = AmountView;
 			sourceTree = "<group>";
@@ -211,7 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				855F144524BF4CAE00E94E23 /* PaymentMethodsView.swift */,
-				855F144724BF4CBF00E94E23 /* PaymentsMethodsView.xib */,
+				855F144724BF4CBF00E94E23 /* PaymentMethodsView.xib */,
 			);
 			path = PaymentMethodsView;
 			sourceTree = "<group>";
@@ -440,7 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85F33DE724B976A9000F4732 /* LaunchScreen.storyboard in Resources */,
-				855F144824BF4CBF00E94E23 /* PaymentsMethodsView.xib in Resources */,
+				855F144824BF4CBF00E94E23 /* PaymentMethodsView.xib in Resources */,
 				85F33DE424B976A9000F4732 /* Assets.xcassets in Resources */,
 				855F143924BF4B9400E94E23 /* AmountView.xib in Resources */,
 				855F144D24BF4D1700E94E23 /* SuccessView.xib in Resources */,
@@ -500,6 +506,7 @@
 				855F144B24BF4CFF00E94E23 /* SuccessView.swift in Sources */,
 				85EB4ED824B979B20080E85B /* MainContracts.swift in Sources */,
 				85EE851A24B98B2C00F8C386 /* MainModels.swift in Sources */,
+				856D112024BFD8AC00BC5785 /* Hideable.swift in Sources */,
 				855901DF24BFA927004676D2 /* ConfirmView.swift in Sources */,
 				85F33DDF24B976A7000F4732 /* MainViewController.swift in Sources */,
 				853D01AD24BD08AE00B96111 /* KeysConstants.swift in Sources */,
@@ -507,6 +514,7 @@
 				855F143D24BF4C2100E94E23 /* BanksView.swift in Sources */,
 				85EE851224B9830C00F8C386 /* MainPresenter.swift in Sources */,
 				85EE851024B9828E00F8C386 /* MainInteractor.swift in Sources */,
+				856D111E24BFD17C00BC5785 /* NibLoadable.swift in Sources */,
 				85F33DDB24B976A7000F4732 /* AppDelegate.swift in Sources */,
 				85F33DDD24B976A7000F4732 /* SceneDelegate.swift in Sources */,
 				855F144424BF4C7A00E94E23 /* InstallmentsView.swift in Sources */,
