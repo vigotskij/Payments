@@ -8,14 +8,33 @@
 
 import UIKit
 
-class ConfirmView: UIView {
+final class ConfirmView: UIView, NibLoadable {
+    private var viewModel: MainModels.ConfirmViewModel?
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    // MARK: - Initializers
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
     }
-    */
 
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+
+    func update(viewModel: MainModels.ConfirmViewModel?) {
+        self.viewModel = viewModel
+    }
+}
+
+private extension ConfirmView {
+    func commonInit() {
+        loadNibContent()
+    }
+}
+
+extension ConfirmView: Hideable {
+    func shouldHide() -> Bool {
+        return viewModel == nil
+    }
 }
