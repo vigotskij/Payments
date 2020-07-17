@@ -11,16 +11,12 @@ import UIKit
 final class AmountView: UIView, NibLoadable {
     private var viewModel: MainModels.AmountViewModel? {
         didSet {
-            title?.text = viewModel?.title
+            title?.text = viewModel?.amount
         }
     }
 
     // MARK: Outlets
-    @IBOutlet private weak var title: UILabel? {
-        didSet {
-            title?.text = viewModel?.title
-        }
-    }
+    @IBOutlet private weak var title: UILabel?
 
     func update(viewModel: MainModels.AmountViewModel?) {
         self.viewModel = viewModel

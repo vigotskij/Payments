@@ -18,32 +18,38 @@ enum MainModels {
     }
 
     struct Request {
-        // Data from View to Interactor/Workers
+        let amount: String
     }
     struct Response {
         let state: State
+        let amount: Double
     }
-    struct ViewModels {
-        // Modeled view Data from Presenter to View
-    }
+
     struct AmountViewModel {
-        let title: String
+        let title = "Ingrese cantidad"
+        let amount: String
     }
+
     struct PaymentMethodsViewModel {
-        let title: String
+        let title = "Elija un método de pago"
     }
+
     struct BanksViewModel {
-        let title: String
+        let title = "Elija un banco"
     }
+
     struct InstallmentsViewModel {
-        let title: String
+        let title = "Installments?"
     }
+
     struct ConfirmViewModel {
-        let title: String
+        let title = "Confirme los datos"
     }
+
     struct SuccessViewModel {
         let title: String
     }
+
     struct ErrorViewModel {
         let title: String
     }

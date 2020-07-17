@@ -18,4 +18,7 @@ extension MainInteractorImplementation: MainInteractor {
     func viewDidLoad() {
         output?.presentInitialState()
     }
+    func backButtonPressed() {
+
+    }
 }

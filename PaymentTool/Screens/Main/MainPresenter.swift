@@ -19,6 +19,6 @@ extension MainPresenterImplementation: MainPresenter {
         output?.updateView(with: response.state)
     }
     func presentInitialState() {
-        output?.presentInitialState(viewModel: .init(title: "start"))
+        output?.presentInitialState(viewModel: .init(amount: "0.00"))
     }
 }

@@ -15,6 +15,7 @@ protocol MainRouter: Router {}
 // MARK: - Inner structure
 protocol MainInteractor: Interactor {
     func viewDidLoad()
+    func backButtonPressed()
 }
 protocol MainPresenter: Presenter {
     func updateView(with response: MainModels.Response)
