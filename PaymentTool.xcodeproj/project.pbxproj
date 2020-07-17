@@ -23,8 +23,12 @@
 		855F144824BF4CBF00E94E23 /* PaymentMethodsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 855F144724BF4CBF00E94E23 /* PaymentMethodsView.xib */; };
 		855F144B24BF4CFF00E94E23 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F144A24BF4CFF00E94E23 /* SuccessView.swift */; };
 		855F144D24BF4D1700E94E23 /* SuccessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 855F144C24BF4D1700E94E23 /* SuccessView.xib */; };
+		85690E0924C10C4700C84078 /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85690E0824C10C4700C84078 /* Worker.swift */; };
+		85690E0B24C10C8F00C84078 /* PaymentMethodsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85690E0A24C10C8F00C84078 /* PaymentMethodsWorker.swift */; };
+		85690E0D24C10D7D00C84078 /* PaymentMethodsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85690E0C24C10D7D00C84078 /* PaymentMethodsDataModel.swift */; };
 		856D111E24BFD17C00BC5785 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856D111D24BFD17C00BC5785 /* NibLoadable.swift */; };
 		856D112024BFD8AC00BC5785 /* Hideable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856D111F24BFD8AC00BC5785 /* Hideable.swift */; };
+		85BBF62524C110C3001092B4 /* URLSession+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BBF62424C110C3001092B4 /* URLSession+extension.swift */; };
 		85E1887824BE26DD0020679A /* EnpointsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E1887724BE26DD0020679A /* EnpointsTests.swift */; };
 		85EB4ED624B979560080E85B /* Architecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EB4ED524B979560080E85B /* Architecture.swift */; };
 		85EB4ED824B979B20080E85B /* MainContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EB4ED724B979B20080E85B /* MainContracts.swift */; };
@@ -76,8 +80,12 @@
 		855F144724BF4CBF00E94E23 /* PaymentMethodsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentMethodsView.xib; sourceTree = "<group>"; };
 		855F144A24BF4CFF00E94E23 /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
 		855F144C24BF4D1700E94E23 /* SuccessView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuccessView.xib; sourceTree = "<group>"; };
+		85690E0824C10C4700C84078 /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Worker.swift; path = PaymentTool/Screens/Main/Views/Contracts/Worker.swift; sourceTree = SOURCE_ROOT; };
+		85690E0A24C10C8F00C84078 /* PaymentMethodsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PaymentMethodsWorker.swift; path = PaymentTool/Screens/Main/Views/Contracts/PaymentMethodsWorker.swift; sourceTree = SOURCE_ROOT; };
+		85690E0C24C10D7D00C84078 /* PaymentMethodsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodsDataModel.swift; sourceTree = "<group>"; };
 		856D111D24BFD17C00BC5785 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		856D111F24BFD8AC00BC5785 /* Hideable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hideable.swift; sourceTree = "<group>"; };
+		85BBF62424C110C3001092B4 /* URLSession+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+extension.swift"; sourceTree = "<group>"; };
 		85E1887724BE26DD0020679A /* EnpointsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnpointsTests.swift; sourceTree = "<group>"; };
 		85EB4ED524B979560080E85B /* Architecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Architecture.swift; sourceTree = "<group>"; };
 		85EB4ED724B979B20080E85B /* MainContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContracts.swift; sourceTree = "<group>"; };
@@ -222,6 +230,14 @@
 			path = PaymentMethodsView;
 			sourceTree = "<group>";
 		};
+		85BBF62324C1107E001092B4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				85BBF62424C110C3001092B4 /* URLSession+extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		85EB4ED024B9788B0080E85B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +266,8 @@
 		85EB4ED324B978E70080E85B /* Workers */ = {
 			isa = PBXGroup;
 			children = (
+				85690E0A24C10C8F00C84078 /* PaymentMethodsWorker.swift */,
+				85690E0824C10C4700C84078 /* Worker.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -280,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				85EE851924B98B2C00F8C386 /* MainModels.swift */,
+				85690E0C24C10D7D00C84078 /* PaymentMethodsDataModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -312,6 +331,7 @@
 				85F33DDC24B976A7000F4732 /* SceneDelegate.swift */,
 				85F33DE324B976A9000F4732 /* Assets.xcassets */,
 				85EB4ED224B978DB0080E85B /* Contracts */,
+				85BBF62324C1107E001092B4 /* Extensions */,
 				85F33DE524B976A9000F4732 /* LaunchScreen.storyboard */,
 				85F33DE024B976A7000F4732 /* Main.storyboard */,
 				85EB4ED024B9788B0080E85B /* Screens */,
@@ -500,15 +520,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85BBF62524C110C3001092B4 /* URLSession+extension.swift in Sources */,
 				855F144624BF4CAE00E94E23 /* PaymentMethodsView.swift in Sources */,
 				85EB4ED624B979560080E85B /* Architecture.swift in Sources */,
 				855901E324BFA956004676D2 /* ErrorView.swift in Sources */,
+				85690E0D24C10D7D00C84078 /* PaymentMethodsDataModel.swift in Sources */,
 				855F144B24BF4CFF00E94E23 /* SuccessView.swift in Sources */,
+				85690E0B24C10C8F00C84078 /* PaymentMethodsWorker.swift in Sources */,
 				85EB4ED824B979B20080E85B /* MainContracts.swift in Sources */,
 				85EE851A24B98B2C00F8C386 /* MainModels.swift in Sources */,
 				856D112024BFD8AC00BC5785 /* Hideable.swift in Sources */,
 				855901DF24BFA927004676D2 /* ConfirmView.swift in Sources */,
 				85F33DDF24B976A7000F4732 /* MainViewController.swift in Sources */,
+				85690E0924C10C4700C84078 /* Worker.swift in Sources */,
 				853D01AD24BD08AE00B96111 /* KeysConstants.swift in Sources */,
 				855F143B24BF4BB500E94E23 /* AmountView.swift in Sources */,
 				855F143D24BF4C2100E94E23 /* BanksView.swift in Sources */,
