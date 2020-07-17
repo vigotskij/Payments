@@ -10,6 +10,7 @@
 		852BED5524C22AA50073E9E7 /* MainNavigationBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852BED5424C22AA50073E9E7 /* MainNavigationBarDelegate.swift */; };
 		853D01AD24BD08AE00B96111 /* KeysConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D01AC24BD08AE00B96111 /* KeysConstants.swift */; };
 		853D01AF24BD092600B96111 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D01AE24BD092600B96111 /* Endpoints.swift */; };
+		8553A50224C25BEB00B0E6ED /* Double+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8553A50124C25BEB00B0E6ED /* Double+extension.swift */; };
 		855901DF24BFA927004676D2 /* ConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855901DE24BFA927004676D2 /* ConfirmView.swift */; };
 		855901E124BFA93A004676D2 /* ConfirmView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 855901E024BFA93A004676D2 /* ConfirmView.xib */; };
 		855901E324BFA956004676D2 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855901E224BFA956004676D2 /* ErrorView.swift */; };
@@ -70,6 +71,7 @@
 		852BED5424C22AA50073E9E7 /* MainNavigationBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationBarDelegate.swift; sourceTree = "<group>"; };
 		853D01AC24BD08AE00B96111 /* KeysConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeysConstants.swift; sourceTree = "<group>"; };
 		853D01AE24BD092600B96111 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		8553A50124C25BEB00B0E6ED /* Double+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+extension.swift"; sourceTree = "<group>"; };
 		855901DE24BFA927004676D2 /* ConfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmView.swift; sourceTree = "<group>"; };
 		855901E024BFA93A004676D2 /* ConfirmView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmView.xib; sourceTree = "<group>"; };
 		855901E224BFA956004676D2 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				85BBF62424C110C3001092B4 /* URLSession+extension.swift */,
+				8553A50124C25BEB00B0E6ED /* Double+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 				856D112024BFD8AC00BC5785 /* Hideable.swift in Sources */,
 				855901DF24BFA927004676D2 /* ConfirmView.swift in Sources */,
 				85F33DDF24B976A7000F4732 /* MainViewController.swift in Sources */,
+				8553A50224C25BEB00B0E6ED /* Double+extension.swift in Sources */,
 				853D01AD24BD08AE00B96111 /* KeysConstants.swift in Sources */,
 				855F143B24BF4BB500E94E23 /* AmountView.swift in Sources */,
 				855F143D24BF4C2100E94E23 /* BanksView.swift in Sources */,

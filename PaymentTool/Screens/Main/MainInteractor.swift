@@ -8,6 +8,8 @@
 
 final class MainInteractorImplementation {
     private var output: MainPresenter?
+    private var state: MainModels.State = .amount(.init(amount: "$ 0.00"))
+    private var request: MainModels.Request?
 
     init(output: MainPresenter) {
         self.output = output
@@ -20,5 +22,8 @@ extension MainInteractorImplementation: MainInteractor {
     }
     func backButtonPressed() {
 
+    }
+    func process(amount: String) {
+        request = MainModels.Request(amount: amount)
     }
 }

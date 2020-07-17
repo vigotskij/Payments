@@ -19,7 +19,13 @@ class MainViewController: UIViewController {
             navigationBar?.delegate = self
         }
     }
-    @IBOutlet private weak var amountView: AmountView?
+    @IBOutlet private weak var amountView: AmountView? {
+        didSet {
+            amountView?.didFinishedEnterAmount = { [weak self] amount in
+                self?.output?.process(amount: amount)
+            }
+        }
+    }
     @IBOutlet private weak var paymentMethodsView: PaymentMethodsView?
     @IBOutlet private weak var banksView: BanksView?
     @IBOutlet private weak var installmentsView: InstallmentsView?
@@ -41,6 +47,7 @@ extension MainViewController: MainView {
         case .amount(let viewModel):
             amountView?.update(viewModel: viewModel)
             navigationBar?.setTitle(with: viewModel.title)
+            amountView?.becomeFirstResponder()
         case .paymentMethods(let viewModel):
             paymentMethodsView?.update(viewModel: viewModel)
             navigationBar?.setTitle(with: viewModel.title)
@@ -66,6 +73,7 @@ extension MainViewController: MainView {
     func presentInitialState(viewModel: MainModels.AmountViewModel) {
         amountView?.update(viewModel: viewModel)
         navigationBar?.setTitle(with: viewModel.title)
+        amountView?.becomeFirstResponder()
         updateViews()
     }
 }

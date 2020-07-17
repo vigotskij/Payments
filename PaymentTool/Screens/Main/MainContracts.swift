@@ -15,6 +15,7 @@ protocol MainRouter: Router {}
 // MARK: - Inner structure
 protocol MainInteractor: Interactor {
     func viewDidLoad()
+    func process(amount: String)
     func backButtonPressed()
 }
 protocol MainPresenter: Presenter {
