@@ -14,6 +14,11 @@ class MainViewController: UIViewController {
     var configurator: MainConfigurator = MainConfiguratorImplementation()
 
     // MARK: Outlets
+    @IBOutlet private weak var navigationBar: MainNavigationBar? {
+        didSet {
+            navigationBar?.delegate = self
+        }
+    }
     @IBOutlet private weak var amountView: AmountView?
     @IBOutlet private weak var paymentMethodsView: PaymentMethodsView?
     @IBOutlet private weak var banksView: BanksView?
@@ -35,28 +40,45 @@ extension MainViewController: MainView {
         switch state {
         case .amount(let viewModel):
             amountView?.update(viewModel: viewModel)
+            navigationBar?.setTitle(with: viewModel.title)
         case .paymentMethods(let viewModel):
             paymentMethodsView?.update(viewModel: viewModel)
+            navigationBar?.setTitle(with: viewModel.title)
         case .banks(let viewModel):
             banksView?.update(viewModel: viewModel)
+            navigationBar?.setTitle(with: viewModel.title)
         case .installments(let viewModel):
             installmentsView?.update(viewModel: viewModel)
+            navigationBar?.setTitle(with: viewModel.title)
         case .confirm(let viewModel):
             confirmView?.update(viewModel: viewModel)
+            navigationBar?.setTitle(with: viewModel.title)
         case .success(let viewModel):
             successView?.update(viewModel: viewModel)
+            navigationBar?.setTitle(with: viewModel.title)
         case .error(let viewModel):
             errorView?.update(viewModel: viewModel)
+            navigationBar?.setTitle(with: viewModel.title)
         }
         updateViews()
     }
 
     func presentInitialState(viewModel: MainModels.AmountViewModel) {
         amountView?.update(viewModel: viewModel)
+        navigationBar?.setTitle(with: viewModel.title)
         updateViews()
     }
 }
 
+extension MainViewController: MainNavigationBarDelegate {
+    func shouldHideBackButton() -> Bool {
+        return !(amountView?.shouldHide() ?? true)
+    }
+
+    func backButtonPressed() {
+        output?.backButtonPressed()
+    }
+}
 private extension MainViewController {
     func updateViews() {
         amountView?.isHidden = amountView?.shouldHide() ?? true
