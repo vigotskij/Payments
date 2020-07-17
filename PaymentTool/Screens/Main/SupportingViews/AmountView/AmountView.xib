@@ -33,11 +33,23 @@
                     </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpG-7H-PCh">
+                    <rect key="frame" x="148" y="158" width="79" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="Continuar">
+                        <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    </state>
+                    <connections>
+                        <action selector="continueButtonTapped:" destination="-1" eventType="touchUpInside" id="Mnf-NA-Rpi"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bh4-kn-iU1" secondAttribute="trailing" constant="16" id="I42-gY-Irh"/>
+                <constraint firstItem="UpG-7H-PCh" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="PxK-OB-GId"/>
                 <constraint firstItem="bh4-kn-iU1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Vuo-Qm-Yve"/>
+                <constraint firstItem="UpG-7H-PCh" firstAttribute="top" secondItem="bh4-kn-iU1" secondAttribute="bottom" constant="17" id="blD-lB-hn2"/>
                 <constraint firstItem="bh4-kn-iU1" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="100" id="uKq-OC-E9O"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
