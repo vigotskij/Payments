@@ -9,7 +9,7 @@
 import UIKit
 
 final class PaymentMethodsView: UIView, NibLoadable {
-    private var viewModel: MainModels.PaymentMethodsViewModel?
+    private var viewModel: PaymentMethods.ViewModel?
 
     // MARK: - Initializers
     override init(frame: CGRect) {
@@ -22,7 +22,7 @@ final class PaymentMethodsView: UIView, NibLoadable {
         commonInit()
     }
 
-    func update(viewModel: MainModels.PaymentMethodsViewModel?) {
+    func update(viewModel: PaymentMethods.ViewModel?) {
         self.viewModel = viewModel
     }
 }

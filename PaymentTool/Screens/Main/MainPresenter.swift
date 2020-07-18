@@ -15,10 +15,34 @@ final class MainPresenterImplementation {
 }
 
 extension MainPresenterImplementation: MainPresenter {
-    func updateView(with response: MainModels.Response) {
-        output?.updateView(with: response.state)
-    }
     func presentInitialState() {
-        output?.presentInitialState(viewModel: .init(amount: "0.00"))
+        output?.presentAmountView(with: .init(amount: ""))
+    }
+
+    func presentAmountView(with response: Amount.Response) {
+
+    }
+
+    func presentPaymentMethodsView(with response: PaymentMethods.Response) {
+
+    }
+
+    func presentBanksView(with response: Banks.Response) {
+
+    }
+
+    func presentInstallmentsView(with response: Installments.Response) {
+
+    }
+
+    func presentConfirmView(with response: Confirm.Response) {
+
+    }
+
+    func presentSuccessView(with response: Success.Response) {
+
+    }
+
+    func presentErrorView(with response: ErrorModels.Response) {
     }
 }

@@ -22,7 +22,8 @@ class MainViewController: UIViewController {
     @IBOutlet private weak var amountView: AmountView? {
         didSet {
             amountView?.didFinishedEnterAmount = { [weak self] amount in
-                self?.output?.process(amount: amount)
+                let request = Amount.Request(amount: amount)
+                self?.output?.process(amount: request)
             }
         }
     }
@@ -41,39 +42,77 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController: MainView {
-    func updateView(with state: MainModels.State) {
-        clearViewModels()
-        switch state {
-        case .amount(let viewModel):
-            amountView?.update(viewModel: viewModel)
-            navigationBar?.setTitle(with: viewModel.title)
-            amountView?.becomeFirstResponder()
-        case .paymentMethods(let viewModel):
-            paymentMethodsView?.update(viewModel: viewModel)
-            navigationBar?.setTitle(with: viewModel.title)
-        case .banks(let viewModel):
-            banksView?.update(viewModel: viewModel)
-            navigationBar?.setTitle(with: viewModel.title)
-        case .installments(let viewModel):
-            installmentsView?.update(viewModel: viewModel)
-            navigationBar?.setTitle(with: viewModel.title)
-        case .confirm(let viewModel):
-            confirmView?.update(viewModel: viewModel)
-            navigationBar?.setTitle(with: viewModel.title)
-        case .success(let viewModel):
-            successView?.update(viewModel: viewModel)
-            navigationBar?.setTitle(with: viewModel.title)
-        case .error(let viewModel):
-            errorView?.update(viewModel: viewModel)
-            navigationBar?.setTitle(with: viewModel.title)
-        }
-        updateViews()
-    }
+//    func updateView(with state: MainModels.State) {
+//        clearViewModels()
+//        switch state {
+//        case .amount(let viewModel):
+//            amountView?.update(viewModel: viewModel)
+//            navigationBar?.setTitle(with: viewModel.title)
+//            amountView?.becomeFirstResponder()
+//        case .paymentMethods(let viewModel):
+//            paymentMethodsView?.update(viewModel: viewModel)
+//            navigationBar?.setTitle(with: viewModel.title)
+//        case .banks(let viewModel):
+//            banksView?.update(viewModel: viewModel)
+//            navigationBar?.setTitle(with: viewModel.title)
+//        case .installments(let viewModel):
+//            installmentsView?.update(viewModel: viewModel)
+//            navigationBar?.setTitle(with: viewModel.title)
+//        case .confirm(let viewModel):
+//            confirmView?.update(viewModel: viewModel)
+//            navigationBar?.setTitle(with: viewModel.title)
+//        case .success(let viewModel):
+//            successView?.update(viewModel: viewModel)
+//            navigationBar?.setTitle(with: viewModel.title)
+//        case .error(let viewModel):
+//            errorView?.update(viewModel: viewModel)
+//            navigationBar?.setTitle(with: viewModel.title)
+//        }
+//        updateViews()
+//    }
 
-    func presentInitialState(viewModel: MainModels.AmountViewModel) {
+    func presentAmountView(with viewModel: Amount.ViewModel) {
         amountView?.update(viewModel: viewModel)
         navigationBar?.setTitle(with: viewModel.title)
         amountView?.becomeFirstResponder()
+        updateViews()
+    }
+
+    func presentPaymentView(with viewModel: PaymentMethods.ViewModel) {
+        clearViewModels()
+        paymentMethodsView?.update(viewModel: viewModel)
+        navigationBar?.setTitle(with: viewModel.title)
+        updateViews()
+    }
+    func presentBanksView(with viewModel: Banks.ViewModel) {
+        clearViewModels()
+        banksView?.update(viewModel: viewModel)
+        navigationBar?.setTitle(with: viewModel.title)
+        updateViews()
+    }
+    func presentInstallmentsView(with viewModel: Installments.ViewModel) {
+        clearViewModels()
+        installmentsView?.update(viewModel: viewModel)
+        navigationBar?.setTitle(with: viewModel.title)
+        updateViews()
+    }
+    func presentConfirmView(with viewModel: Confirm.ViewModel) {
+        clearViewModels()
+        confirmView?.update(viewModel: viewModel)
+        navigationBar?.setTitle(with: viewModel.title)
+        updateViews()
+    }
+    func presentSuccessView(with viewModel: Success.ViewModel) {
+        clearViewModels()
+        successView?.update(viewModel: viewModel)
+        navigationBar?.setTitle(with: viewModel.title)
+        updateViews()
+    }
+
+    func presentErrorView(with viewModel: ErrorModels.ViewModel) {
+        clearViewModels()
+        errorView?.update(viewModel: viewModel)
+        navigationBar?.setTitle(with: viewModel.title)
         updateViews()
     }
 }

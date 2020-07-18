@@ -8,8 +8,17 @@
 
 final class MainInteractorImplementation {
     private var output: MainPresenter?
-    private var state: MainModels.State = .amount(.init(amount: "$ 0.00"))
+    private var state: MainModels.DataState = .amount
+    private var paymentMethods: [PaymentMethodsDataModel]? {
+        didSet {
+            guard let paymentMethods = paymentMethods else {
+                return
+            }
+            output?.presentPaymentMethodsView(with: .init(methods: paymentMethods))
+        }
+    }
     private var request: MainModels.Request?
+    private var worker: PaymentMethodsWorker = Worker()
 
     init(output: MainPresenter) {
         self.output = output
@@ -20,10 +29,22 @@ extension MainInteractorImplementation: MainInteractor {
     func viewDidLoad() {
         output?.presentInitialState()
     }
-    func backButtonPressed() {
 
+    func process(amount: Amount.Request) {
+        request = MainModels.Request(amount: amount.amount, paymentMethodId: "")
+        worker.getPaymentMethods { [weak self] result in
+            switch result {
+            case .success(let retrievedData):
+                self?.paymentMethods = retrievedData
+                print(retrievedData)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
-    func process(amount: String) {
-        request = MainModels.Request(amount: amount)
-    }
+    func process(paymentMethod: PaymentMethods.Request) {}
+    func process(bank: Banks.Request) {}
+    func process(installment: Installments.Request) {}
+    func process(confirmed: Bool) {}
+    func backButtonPressed() {}
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 final class ConfirmView: UIView, NibLoadable {
-    private var viewModel: MainModels.ConfirmViewModel?
+    private var viewModel: Confirm.ViewModel?
 
     // MARK: - Initializers
     override init(frame: CGRect) {
@@ -22,7 +22,7 @@ final class ConfirmView: UIView, NibLoadable {
         commonInit()
     }
 
-    func update(viewModel: MainModels.ConfirmViewModel?) {
+    func update(viewModel: Confirm.ViewModel?) {
         self.viewModel = viewModel
     }
 }

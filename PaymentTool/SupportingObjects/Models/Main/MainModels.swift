@@ -7,50 +7,33 @@
 //
 
 enum MainModels {
-    enum State {
-        case amount(AmountViewModel)
-        case paymentMethods(PaymentMethodsViewModel)
-        case banks(BanksViewModel)
-        case installments(InstallmentsViewModel)
-        case confirm(ConfirmViewModel)
-        case success(SuccessViewModel)
-        case error(ErrorViewModel)
+    enum DataState {
+        case amount
+        case paymentMethods
+        case banks
+        case installments
+        case confirm
+        case success
+        case error
+
+        func previousState() -> DataState {
+            switch self {
+            case .paymentMethods:
+                return .amount
+            case .banks:
+                return .paymentMethods
+            case .installments:
+                return .banks
+            case .confirm:
+                return .installments
+            default:
+                return .error
+            }
+        }
     }
 
     struct Request {
-        let amount: String
-    }
-    struct Response {
-        let state: State
-        let amount: Double
-    }
-
-    struct AmountViewModel {
-        let title = "Ingrese cantidad"
-        let amount: String
-    }
-
-    struct PaymentMethodsViewModel {
-        let title = "Elija un método de pago"
-    }
-
-    struct BanksViewModel {
-        let title = "Elija un banco"
-    }
-
-    struct InstallmentsViewModel {
-        let title = "Installments?"
-    }
-
-    struct ConfirmViewModel {
-        let title = "Confirme los datos"
-    }
-
-    struct SuccessViewModel {
-        let title: String
-    }
-
-    struct ErrorViewModel {
-        let title: String
+        var amount: String
+        var paymentMethodId: String
     }
 }

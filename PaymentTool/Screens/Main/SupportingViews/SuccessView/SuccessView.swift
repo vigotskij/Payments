@@ -9,7 +9,7 @@
 import UIKit
 
 final class SuccessView: UIView, NibLoadable {
-    private var viewModel: MainModels.SuccessViewModel?
+    private var viewModel: Success.ViewModel?
 
     // MARK: - Initializers
     override init(frame: CGRect) {
@@ -22,7 +22,7 @@ final class SuccessView: UIView, NibLoadable {
         commonInit()
     }
 
-    func update(viewModel: MainModels.SuccessViewModel?) {
+    func update(viewModel: Success.ViewModel?) {
         self.viewModel = viewModel
     }
 }

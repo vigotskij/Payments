@@ -9,9 +9,10 @@
 import UIKit
 
 final class AmountView: UIView, NibLoadable, UITextInputTraits {
-    private var viewModel: MainModels.AmountViewModel? {
+    private var viewModel: Amount.ViewModel? {
         didSet {
-            title?.text = viewModel?.amount
+            amount = viewModel?.amount ?? ""
+            title?.text = formattedAmount
         }
     }
     private var amount: String = "" {
@@ -28,6 +29,7 @@ final class AmountView: UIView, NibLoadable, UITextInputTraits {
 
     // MARK: Public properties
     var keyboardType: UIKeyboardType = .numberPad
+    // TODO: move this to a delegate
     var didFinishedEnterAmount: ((String) -> Void)?
 
     // MARK: Outlets
@@ -46,7 +48,7 @@ final class AmountView: UIView, NibLoadable, UITextInputTraits {
         }
     }
 
-    func update(viewModel: MainModels.AmountViewModel?) {
+    func update(viewModel: Amount.ViewModel?) {
         self.viewModel = viewModel
     }
 
@@ -87,7 +89,10 @@ extension AmountView: UIKeyInput {
     }
 
     func insertText(_ text: String) {
-        amount.append(contentsOf: text)
+        if !text.isZero() ||
+            !(amount.isZero() || amount.isEmpty) {
+            amount.append(contentsOf: text)
+        }
     }
 
     func deleteBackward() {

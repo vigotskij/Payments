@@ -9,7 +9,7 @@
 import UIKit
 
 final class InstallmentsView: UIView, NibLoadable {
-    private var viewModel: MainModels.InstallmentsViewModel?
+    private var viewModel: Installments.ViewModel?
 
     // MARK: - Initializers
     override init(frame: CGRect) {
@@ -22,7 +22,7 @@ final class InstallmentsView: UIView, NibLoadable {
         commonInit()
     }
 
-    func update(viewModel: MainModels.InstallmentsViewModel?) {
+    func update(viewModel: Installments.ViewModel?) {
         self.viewModel = viewModel
     }
 }

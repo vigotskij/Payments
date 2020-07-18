@@ -9,7 +9,7 @@
 import UIKit
 
 final class BanksView: UIView, NibLoadable {
-    private var viewModel: MainModels.BanksViewModel?
+    private var viewModel: Banks.ViewModel?
 
     // MARK: - Initializers
     override init(frame: CGRect) {
@@ -22,7 +22,7 @@ final class BanksView: UIView, NibLoadable {
         commonInit()
     }
 
-    func update(viewModel: MainModels.BanksViewModel?) {
+    func update(viewModel: Banks.ViewModel?) {
         self.viewModel = viewModel
     }
 }

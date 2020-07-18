@@ -9,7 +9,7 @@
 import UIKit
 
 final class ErrorView: UIView, NibLoadable {
-    private var viewModel: MainModels.ErrorViewModel?
+    private var viewModel: ErrorModels.ViewModel?
 
     // MARK: - Initializers
     override init(frame: CGRect) {
@@ -21,7 +21,7 @@ final class ErrorView: UIView, NibLoadable {
         super.init(coder: aDecoder)
         commonInit()
     }
-    func update(viewModel: MainModels.ErrorViewModel?) {
+    func update(viewModel: ErrorModels.ViewModel?) {
         self.viewModel = viewModel
     }
 }
