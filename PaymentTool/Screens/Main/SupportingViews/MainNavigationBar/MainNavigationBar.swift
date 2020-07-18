@@ -10,13 +10,14 @@ import UIKit
 
 @IBDesignable
 final class MainNavigationBar: UIView, NibLoadable {
-    // MARK: Outlets
-    @IBOutlet private weak var backButton: UIButton?
-    @IBOutlet private weak var titleLable: UILabel? {
+    private var title: String? {
         didSet {
-            toggleBackButtonPresented()
+            updateUI()
         }
     }
+    // MARK: Outlets
+    @IBOutlet private weak var backButton: UIButton?
+    @IBOutlet private weak var titleLable: UILabel?
 
     // MARK: Delegate
     weak var delegate: MainNavigationBarDelegate?
@@ -27,9 +28,7 @@ final class MainNavigationBar: UIView, NibLoadable {
     }
 
     func setTitle(with title: String) {
-        DispatchQueue.main.async { [weak self] in
-            self?.titleLable?.text = title
-        }
+        self.title = title
     }
 
     // MARK: - Initializers
@@ -49,10 +48,11 @@ private extension MainNavigationBar {
         loadNibContent()
     }
 
-    func toggleBackButtonPresented() {
+    func updateUI() {
+        let shouldBackButtonBeHidden = delegate?.shouldHideBackButton() ?? true
         DispatchQueue.main.async { [weak self] in
-            let shouldBeHidden = self?.delegate?.shouldHideBackButton() ?? true
-            self?.backButton?.isHidden = shouldBeHidden
+            self?.titleLable?.text = self?.title
+            self?.backButton?.isHidden = shouldBackButtonBeHidden
         }
     }
 }
