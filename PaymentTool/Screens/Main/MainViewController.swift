@@ -27,7 +27,11 @@ class MainViewController: UIViewController {
             }
         }
     }
-    @IBOutlet private weak var paymentMethodsView: PaymentMethodsView?
+    @IBOutlet private weak var paymentMethodsView: PaymentMethodsView? {
+        didSet {
+            paymentMethodsView?.delegate = self
+        }
+    }
     @IBOutlet private weak var banksView: BanksView?
     @IBOutlet private weak var installmentsView: InstallmentsView?
     @IBOutlet private weak var confirmView: ConfirmView?
@@ -42,34 +46,6 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController: MainView {
-//    func updateView(with state: MainModels.State) {
-//        clearViewModels()
-//        switch state {
-//        case .amount(let viewModel):
-//            amountView?.update(viewModel: viewModel)
-//            navigationBar?.setTitle(with: viewModel.title)
-//            amountView?.becomeFirstResponder()
-//        case .paymentMethods(let viewModel):
-//            paymentMethodsView?.update(viewModel: viewModel)
-//            navigationBar?.setTitle(with: viewModel.title)
-//        case .banks(let viewModel):
-//            banksView?.update(viewModel: viewModel)
-//            navigationBar?.setTitle(with: viewModel.title)
-//        case .installments(let viewModel):
-//            installmentsView?.update(viewModel: viewModel)
-//            navigationBar?.setTitle(with: viewModel.title)
-//        case .confirm(let viewModel):
-//            confirmView?.update(viewModel: viewModel)
-//            navigationBar?.setTitle(with: viewModel.title)
-//        case .success(let viewModel):
-//            successView?.update(viewModel: viewModel)
-//            navigationBar?.setTitle(with: viewModel.title)
-//        case .error(let viewModel):
-//            errorView?.update(viewModel: viewModel)
-//            navigationBar?.setTitle(with: viewModel.title)
-//        }
-//        updateViews()
-//    }
 
     func presentAmountView(with viewModel: Amount.ViewModel) {
         amountView?.update(viewModel: viewModel)
@@ -117,24 +93,20 @@ extension MainViewController: MainView {
     }
 }
 
-extension MainViewController: MainNavigationBarDelegate {
-    func shouldHideBackButton() -> Bool {
-        return !(amountView?.shouldHide() ?? true)
-    }
-
-    func backButtonPressed() {
-        output?.backButtonPressed()
-    }
-}
 private extension MainViewController {
     func updateViews() {
-        amountView?.isHidden = amountView?.shouldHide() ?? true
-        paymentMethodsView?.isHidden = paymentMethodsView?.shouldHide() ?? true
-        banksView?.isHidden = banksView?.shouldHide() ?? true
-        installmentsView?.isHidden = installmentsView?.shouldHide() ?? true
-        confirmView?.isHidden = confirmView?.shouldHide() ?? true
-        successView?.isHidden = successView?.shouldHide() ?? true
-        errorView?.isHidden = errorView?.shouldHide() ?? true
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.amountView?.isHidden = self.amountView?.shouldHide() ?? true
+            self.paymentMethodsView?.isHidden = self.paymentMethodsView?.shouldHide() ?? true
+            self.banksView?.isHidden = self.banksView?.shouldHide() ?? true
+            self.installmentsView?.isHidden = self.installmentsView?.shouldHide() ?? true
+            self.confirmView?.isHidden = self.confirmView?.shouldHide() ?? true
+            self.successView?.isHidden = self.successView?.shouldHide() ?? true
+            self.errorView?.isHidden = self.errorView?.shouldHide() ?? true
+        }
     }
 
     func clearViewModels() {
@@ -145,5 +117,22 @@ private extension MainViewController {
         confirmView?.update(viewModel: nil)
         successView?.update(viewModel: nil)
         errorView?.update(viewModel: nil)
+    }
+}
+
+// MARK: Delegate implementations
+extension MainViewController: MainNavigationBarDelegate {
+    func shouldHideBackButton() -> Bool {
+        return !(amountView?.shouldHide() ?? true)
+    }
+
+    func backButtonPressed() {
+        output?.backButtonPressed()
+    }
+}
+
+extension MainViewController: PaymentMethodsViewDelegate {
+    func nextButtonPressed(row: Int) {
+        output?.process(paymentMethod: .init(selectedMethod: row))
     }
 }

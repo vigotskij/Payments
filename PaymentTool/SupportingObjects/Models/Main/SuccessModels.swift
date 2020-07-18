@@ -6,7 +6,6 @@
 //  Copyright © 2020 Boris Sortino. All rights reserved.
 //
 
-
 enum Success {
     struct Response {
 

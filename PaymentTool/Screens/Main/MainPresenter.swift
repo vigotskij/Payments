@@ -24,7 +24,7 @@ extension MainPresenterImplementation: MainPresenter {
     }
 
     func presentPaymentMethodsView(with response: PaymentMethods.Response) {
-
+        output?.presentPaymentView(with: .init(from: response))
     }
 
     func presentBanksView(with response: Banks.Response) {

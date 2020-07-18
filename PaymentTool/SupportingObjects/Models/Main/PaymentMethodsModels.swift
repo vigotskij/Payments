@@ -8,7 +8,7 @@
 
 enum PaymentMethods {
     struct Request {
-        let selectedMethod: String
+        let selectedMethod: Int
     }
     struct Response {
         let methods: [PaymentMethodsDataModel]
@@ -16,7 +16,7 @@ enum PaymentMethods {
     struct ViewModel {
         let title = "Elija un método de pago"
         let methods: [PaymentMethodViewModel]
-        
+
         init(from response: Response) {
             methods = response.methods.map({ PaymentMethodViewModel(name: $0.name)})
         }

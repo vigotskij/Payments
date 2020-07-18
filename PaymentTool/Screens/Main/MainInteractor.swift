@@ -42,7 +42,16 @@ extension MainInteractorImplementation: MainInteractor {
             }
         }
     }
-    func process(paymentMethod: PaymentMethods.Request) {}
+    func process(paymentMethod: PaymentMethods.Request) {
+        guard
+            let methodId = paymentMethods?[paymentMethod.selectedMethod]
+                .methodId else {
+            return
+        }
+        request?.paymentMethodId = methodId
+        // TODO: call banks with method id
+        // TODO: present banks view
+    }
     func process(bank: Banks.Request) {}
     func process(installment: Installments.Request) {}
     func process(confirmed: Bool) {}

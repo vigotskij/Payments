@@ -12,12 +12,12 @@ final class AmountView: UIView, NibLoadable, UITextInputTraits {
     private var viewModel: Amount.ViewModel? {
         didSet {
             amount = viewModel?.amount ?? ""
-            title?.text = formattedAmount
+            updateUI()
         }
     }
     private var amount: String = "" {
         didSet {
-            title?.text = formattedAmount
+            updateUI()
         }
     }
     private var amountDouble: Double {
@@ -67,6 +67,12 @@ final class AmountView: UIView, NibLoadable, UITextInputTraits {
 private extension AmountView {
     func commonInit() {
         loadNibContent()
+    }
+
+    func updateUI() {
+        DispatchQueue.main.async { [weak self] in
+            self?.title?.text = self?.formattedAmount
+        }
     }
 }
 

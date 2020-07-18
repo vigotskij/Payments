@@ -27,7 +27,9 @@ final class MainNavigationBar: UIView, NibLoadable {
     }
 
     func setTitle(with title: String) {
-        titleLable?.text = title
+        DispatchQueue.main.async { [weak self] in
+            self?.titleLable?.text = title
+        }
     }
 
     // MARK: - Initializers
@@ -48,6 +50,9 @@ private extension MainNavigationBar {
     }
 
     func toggleBackButtonPresented() {
-        backButton?.isHidden = delegate?.shouldHideBackButton() ?? true
+        DispatchQueue.main.async { [weak self] in
+            let shouldBeHidden = self?.delegate?.shouldHideBackButton() ?? true
+            self?.backButton?.isHidden = shouldBeHidden
+        }
     }
 }
