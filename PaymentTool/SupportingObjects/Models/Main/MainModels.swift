@@ -33,7 +33,7 @@ enum MainModels {
     }
 
     struct Request {
-        var amount: String
+        var rawAmount: String
         var paymentMethodId: String
     }
 }

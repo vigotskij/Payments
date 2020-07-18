@@ -20,7 +20,8 @@ extension MainPresenterImplementation: MainPresenter {
     }
 
     func presentAmountView(with response: Amount.Response) {
-
+        let viewModel = Amount.ViewModel(amount: response.amount)
+        output?.presentAmountView(with: viewModel)
     }
 
     func presentPaymentMethodsView(with response: PaymentMethods.Response) {

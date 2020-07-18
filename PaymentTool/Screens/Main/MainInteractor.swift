@@ -31,12 +31,12 @@ extension MainInteractorImplementation: MainInteractor {
     }
 
     func process(amount: Amount.Request) {
-        request = MainModels.Request(amount: amount.amount, paymentMethodId: "")
+        request = MainModels.Request(rawAmount: amount.amount, paymentMethodId: "")
         worker.getPaymentMethods { [weak self] result in
             switch result {
             case .success(let retrievedData):
+                self?.state = .paymentMethods
                 self?.paymentMethods = retrievedData
-                print(retrievedData)
             case .failure(let error):
                 print(error)
             }
@@ -55,5 +55,20 @@ extension MainInteractorImplementation: MainInteractor {
     func process(bank: Banks.Request) {}
     func process(installment: Installments.Request) {}
     func process(confirmed: Bool) {}
-    func backButtonPressed() {}
+    func backButtonPressed() {
+        switch state.previousState() {
+        case .amount:
+            state = .amount
+            let response = Amount.Response(amount: request?.rawAmount ?? "")
+            output?.presentAmountView(with: response)
+        case .paymentMethods:
+            state = .paymentMethods
+            guard let paymentMethods = paymentMethods else {
+                return
+            }
+            output?.presentPaymentMethodsView(with: .init(methods: paymentMethods))
+        default:
+            return
+        }
+    }
 }

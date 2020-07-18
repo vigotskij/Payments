@@ -40,10 +40,7 @@ final class AmountView: UIView, NibLoadable, UITextInputTraits {
         if let didFinishedEnterAmount = didFinishedEnterAmount {
             if amountDouble.isValidAmount() {
                 resignFirstResponder()
-                // MARK: adding delay so it looks like animated
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                    didFinishedEnterAmount(self.formattedAmount)
-                }
+                didFinishedEnterAmount(amount)
             }
         }
     }

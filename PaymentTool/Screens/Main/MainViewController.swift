@@ -48,6 +48,7 @@ class MainViewController: UIViewController {
 extension MainViewController: MainView {
 
     func presentAmountView(with viewModel: Amount.ViewModel) {
+        clearViewModels()
         amountView?.update(viewModel: viewModel)
         navigationBar?.setTitle(with: viewModel.title)
         amountView?.becomeFirstResponder()
